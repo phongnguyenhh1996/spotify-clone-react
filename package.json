@@ -11,11 +11,11 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "eslint . --fix",
+      "eslint .",
       "git add"
     ],
     "*.scss": [
-      "stylelint --syntax scss --fix",
+      "stylelint --syntax scss",
       "git add"
     ]
   },
