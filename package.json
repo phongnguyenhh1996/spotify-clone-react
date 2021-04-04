@@ -12,11 +12,11 @@
   "lint-staged": {
     "*.{js,jsx}": [
       "eslint . --fix",
-      "git add ."
+      "git add"
     ],
     "*.scss": [
       "stylelint --syntax scss --fix",
-      "git add ."
+      "git add"
     ]
   },
   "husky": {
