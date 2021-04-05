@@ -1,11 +1,7 @@
 import React from 'react'
 import './app.scss'
-import PropTypes from 'prop-types'
+import AppRouter from '@/routes'
 
-const App = ({title}) => <div className="title">{title}</div>
-
-App.propTypes = {
-  title: PropTypes.string.isRequired,
+export default function App() {
+  return <AppRouter />
 }
-
-export default App
