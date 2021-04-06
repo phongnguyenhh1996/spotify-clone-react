@@ -1,0 +1,171 @@
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+html {
+  font-size: 10px;
+}
+
+.login--link {
+  margin-bottom: 10px;
+
+  & a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 13px 80px;
+    font-size: 1.6rem;
+    border-radius: 50px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    min-width: 300px;
+    transition: all 0.3s ease;
+
+    & svg {
+      margin-right: 15px;
+      font-size: 20px;
+    }
+  }
+}
+
+.bg--face {
+  background-color: #3b5998;
+}
+
+.bg--black {
+  background-color: #000;
+}
+
+.bg--white {
+  background-color: #fff;
+}
+
+.bg--white-hover:hover {
+  color: #fff;
+  background-color: #616467;
+}
+
+.bg--green {
+  background-color: #1ed760;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-black {
+  color: #000;
+}
+
+.text--green {
+  color: #1ed760;
+}
+
+.border--gray {
+  box-shadow: inset 0 0 0 2px #616467;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 50px;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.width--100 {
+  width: 100%;
+}
+
+.linethrough--or {
+  padding: 10px 0;
+  width: 100%;
+
+  & span {
+    position: relative;
+    min-width: 300px;
+    width: 100%;
+    height: 1px;
+    display: block;
+    background-color: #616467;
+
+    &::before {
+      position: absolute;
+      content: 'or';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px 15px;
+      font-size: 1.4rem;
+      font-weight: 500;
+      background-color: #fff;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.display--center {
+  display: flex;
+  justify-content: center;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.input--form {
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  & label {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  & input {
+    width: 100%;
+    height: 40px;
+    padding: 6px 12px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9dadc;
+    font-size: 1.6rem;
+    box-sizing: border-box;
+    outline: none;
+  }
+}
+
+.border--radius {
+  border-radius: 5px;
+}
+
+.text--underline {
+  text-decoration: underline;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+.mt-3 {
+  margin-top: 30px;
+}
+
+.mt-4 {
+  margin-top: 40px;
+}
+
+.mt-5 {
+  margin-top: 50px;
+}

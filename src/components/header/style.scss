@@ -1,0 +1,161 @@
+@import '../../scss/color.scss';
+
+.header {
+  background-color: $black;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__bars {
+    display: none;
+  }
+}
+
+.navbar {
+  &__ul {
+    display: flex;
+  }
+
+  &__li {
+    margin-right: 30px;
+
+    & a {
+      color: $white;
+      font-size: 15px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+}
+
+.navbar__mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1150px) {
+  .header {
+    padding: 0 30px;
+
+    &__bars {
+      display: block;
+      position: relative;
+      right: 60px;
+      z-index: 100;
+      background-color: transparent;
+      outline: none;
+      border: none;
+
+      & svg {
+        color: $white;
+        font-size: 35px;
+      }
+    }
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar__mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    right: -310px;
+    background-color: $black;
+    padding: 100px 0 50px 40px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+
+    &-li {
+      padding-bottom: 25px;
+
+      @for $i from 0 through 6 {
+        &:nth-child(#{$i}) {
+          animation: show-li 0.3s ease;
+          animation-fill-mode: forwards;
+          animation-delay: #{$i / 100}s;
+        }
+      }
+
+      & div {
+        width: 50px;
+        height: 1px;
+        background-color: $white;
+      }
+
+      &:nth-child(5) a,
+      &:nth-child(4) a {
+        font-size: 20px;
+      }
+    }
+
+    &-link {
+      font-size: 30px;
+      font-weight: 700;
+      color: $white;
+    }
+  }
+}
+
+.show--menu {
+  animation: show-menu 0.2s ease;
+  animation-fill-mode: forwards;
+}
+
+.off--menu {
+  animation: off-menu 0.2s ease;
+  animation-fill-mode: backwards;
+}
+
+@keyframes show-menu {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes off-menu {
+  from {
+    right: 0;
+    opacity: 1;
+  }
+
+  to {
+    right: -300px;
+    opacity: 0;
+  }
+}
+
+@keyframes show-li {
+  from {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
