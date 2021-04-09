@@ -1,11 +1,9 @@
-import Header from '@/components/header'
 import React, {Fragment} from 'react'
 import {Switch, Route, BrowserRouter} from 'react-router-dom'
 import routes from './routes'
 
 const AppRouter = () => (
   <BrowserRouter>
-    <Header />
     <Switch>
       {routes.map((routeItem, index) => {
         const {

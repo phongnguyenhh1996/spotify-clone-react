@@ -27,17 +27,31 @@
 
   &__li {
     margin-right: 30px;
+  }
 
-    & a {
-      color: $white;
-      font-size: 15px;
-      font-weight: 600;
-      transition: color 0.3s ease;
+  &__li:nth-child(4) {
+    margin-right: 10px;
+    margin-left: -20px;
+  }
 
-      &:hover {
-        color: $green;
-      }
+  &__link {
+    color: $white;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+
+    &:hover {
+      color: $green;
     }
+  }
+
+  & &__li:nth-child(4) &__link {
+    background-color: $white;
+    height: 1px;
+    width: 15px;
+    display: block;
+    transform: rotate(90deg) translateX(8px);
   }
 }
 
@@ -58,7 +72,7 @@
       outline: none;
       border: none;
 
-      & svg {
+      &__bars-icon {
         color: $white;
         font-size: 35px;
       }
@@ -93,23 +107,24 @@
           animation-delay: #{$i / 100}s;
         }
       }
-
-      & div {
-        width: 50px;
-        height: 1px;
-        background-color: $white;
-      }
-
-      &:nth-child(5) a,
-      &:nth-child(4) a {
-        font-size: 20px;
-      }
     }
 
     &-link {
       font-size: 30px;
       font-weight: 700;
       color: $white;
+    }
+
+    & &-li:nth-child(4) &-link {
+      background-color: $white;
+      height: 2px;
+      width: 30px;
+      display: block;
+    }
+
+    & &-li:nth-child(6) &-link,
+    & &-li:nth-child(5) &-link {
+      font-size: 20px;
     }
   }
 }
