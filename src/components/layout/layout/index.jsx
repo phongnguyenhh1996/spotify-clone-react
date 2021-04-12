@@ -1,4 +1,4 @@
-import Header from '@/components/header'
+import Header from '@/Components/Header/index'
 import React from 'react'
 
 function Layout({children}) {
