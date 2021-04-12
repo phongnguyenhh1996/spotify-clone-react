@@ -1,4 +1,6 @@
 @import '../../scss/color.scss';
+@import '../../scss/responsive.scss';
+@import '../../scss/z_index.scss';
 
 .header {
   background-color: $black;
@@ -53,13 +55,13 @@
     display: block;
     transform: rotate(90deg) translateX(8px);
   }
+
+  &__mobile {
+    display: none;
+  }
 }
 
-.navbar__mobile {
-  display: none;
-}
-
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: $md) {
   .header {
     padding: 0 30px;
 
@@ -67,7 +69,7 @@
       display: block;
       position: relative;
       right: 60px;
-      z-index: 100;
+      z-index: map-get($zindex, bars);
       background-color: transparent;
       outline: none;
       border: none;
@@ -81,65 +83,65 @@
 
   .navbar {
     display: none;
-  }
 
-  .navbar__mobile {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-    width: 300px;
-    position: fixed;
-    top: 0;
-    right: -310px;
-    background-color: $black;
-    padding: 100px 0 50px 40px;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
+    &__mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+      width: 300px;
+      position: fixed;
+      top: 0;
+      right: -310px;
+      background-color: $black;
+      padding: 100px 0 50px 40px;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
 
-    &-li {
-      padding-bottom: 25px;
+      &-li {
+        padding-bottom: 25px;
 
-      @for $i from 0 through 6 {
-        &:nth-child(#{$i}) {
-          animation: show-li 0.3s ease;
-          animation-fill-mode: forwards;
-          animation-delay: #{$i / 100}s;
+        @for $i from 0 through 6 {
+          &:nth-child(#{$i}) {
+            animation: show-li-ani 0.3s ease;
+            animation-fill-mode: forwards;
+            animation-delay: #{$i / 100}s;
+          }
         }
       }
-    }
 
-    &-link {
-      font-size: 30px;
-      font-weight: 700;
-      color: $white;
-    }
+      &-link {
+        font-size: 30px;
+        font-weight: 700;
+        color: $white;
+      }
 
-    & &-li:nth-child(4) &-link {
-      background-color: $white;
-      height: 2px;
-      width: 30px;
-      display: block;
-    }
+      & &-li:nth-child(4) &-link {
+        background-color: $white;
+        height: 2px;
+        width: 30px;
+        display: block;
+      }
 
-    & &-li:nth-child(6) &-link,
-    & &-li:nth-child(5) &-link {
-      font-size: 20px;
+      & &-li:nth-child(6) &-link,
+      & &-li:nth-child(5) &-link {
+        font-size: 20px;
+      }
     }
   }
 }
 
-.show--menu {
-  animation: show-menu 0.2s ease;
+.show-menu {
+  animation: show-menu-ani 0.2s ease;
   animation-fill-mode: forwards;
 }
 
-.off--menu {
-  animation: off-menu 0.2s ease;
+.off-menu {
+  animation: off-menu-ani 0.2s ease;
   animation-fill-mode: backwards;
 }
 
-@keyframes show-menu {
+@keyframes show-menu-ani {
   from {
     right: -300px;
     opacity: 0;
@@ -151,7 +153,7 @@
   }
 }
 
-@keyframes off-menu {
+@keyframes off-menu-ani {
   from {
     right: 0;
     opacity: 1;
@@ -163,7 +165,7 @@
   }
 }
 
-@keyframes show-li {
+@keyframes show-li-ani {
   from {
     transform: translateX(300px);
     opacity: 0;

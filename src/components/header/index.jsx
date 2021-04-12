@@ -10,7 +10,7 @@ function Header() {
   const [showMenu, setShowMenu] = useState(false)
   const navbarMobile = classes(
     'navbar__mobile',
-    {'show--menu': showMenu},
+    {'show-menu': showMenu},
     {'off-menu': !showMenu},
   )
   const handleshowMenu = () => {
