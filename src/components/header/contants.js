@@ -6,5 +6,4 @@ const listLink = [
   {id: 4, text: 'Sign up', link: 'register'},
   {id: 5, text: 'Log in', link: 'login'},
 ]
-
 export default listLink
