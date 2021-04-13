@@ -1,4 +1,4 @@
-import Layout from '@/components/layout/layout'
+import LoginLayout from '@/components/Layout/LoginLayout'
 import Home from '@/containers/Home'
 import Login from '@/containers/Login'
 
@@ -8,14 +8,14 @@ const routes = [
     component: Home,
     isAuthRoute: false,
     exact: true,
-    layout: Layout,
+    layout: LoginLayout,
   },
   {
     path: '/login',
     component: Login,
     isAuthRoute: false,
     exact: true,
-    layout: Layout,
+    layout: LoginLayout,
   },
 ]
 

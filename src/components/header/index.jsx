@@ -3,7 +3,7 @@ import './style.scss'
 import {Link} from 'react-router-dom'
 import {FaBars} from 'react-icons/fa'
 import classes from 'classnames'
-import listLink from './contants'
+import {listLink} from './contants'
 import logo from '../../images/logoSpotify.svg'
 
 function Header() {

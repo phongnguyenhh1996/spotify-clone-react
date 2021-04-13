@@ -21,10 +21,11 @@
     "react/jsx-uses-vars": "error",
     "react/jsx-props-no-spreading": 0,
     "react/prop-types": [2, { "ignore": ["children"] }],
+    "import/prefer-default-export": "off",
     "import/no-unresolved": [
       "error",
       {
-        "ignore": ["@"]
+        "ignore": ["@", "."]
       }
     ]
   },

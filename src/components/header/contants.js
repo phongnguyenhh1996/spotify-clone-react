@@ -1,4 +1,4 @@
-const listLink = [
+export const listLink = [
   {id: 0, text: 'Premium', link: 'Premium'},
   {id: 1, text: 'Support', link: 'Support'},
   {id: 2, text: 'Download', link: 'Download'},
@@ -6,4 +6,3 @@ const listLink = [
   {id: 4, text: 'Sign up', link: 'register'},
   {id: 5, text: 'Log in', link: 'login'},
 ]
-export default listLink
