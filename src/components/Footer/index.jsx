@@ -3,7 +3,7 @@ import logo from '@/images/logoSpotify.svg'
 import {FaFacebookF, FaTwitter, FaInstagram} from 'react-icons/fa'
 import './style.scss'
 import {listLinkCompany, listLinkCommunities, listLinkUseful} from './contants'
-import LinkFooter from './Components/Link'
+import LinkFooter from './Components/LinkFooter'
 
 function Footer() {
   return (
