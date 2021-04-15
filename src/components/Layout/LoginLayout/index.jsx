@@ -1,4 +1,5 @@
-import Header from '@/components/Header'
+import Footer from '@/Components/Footer'
+import Header from '@/Components/Header'
 import React from 'react'
 
 function LoginLayout({children}) {
@@ -6,6 +7,7 @@ function LoginLayout({children}) {
     <>
       <Header />
       {children}
+      <Footer />
     </>
   )
 }
