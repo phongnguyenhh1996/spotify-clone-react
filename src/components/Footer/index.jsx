@@ -1,8 +1,12 @@
 import React from 'react'
 import logo from '@/images/logoSpotify.svg'
-import {FaFacebookF, FaTwitter, FaInstagram} from 'react-icons/fa'
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa'
 import './style.scss'
-import {listLinkCompany, listLinkCommunities, listLinkUseful} from './contants'
+import {
+  listLinkCompany,
+  listLinkCommunities,
+  listLinkUseful,
+} from './contants'
 import LinkFooter from './Components/LinkFooter'
 
 function Footer() {

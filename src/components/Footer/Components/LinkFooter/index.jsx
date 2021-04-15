@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './style.scss'
 
 function LinkFooter(props) {
-  const {title, listLink} = props
+  const { title, listLink } = props
   return (
     <div className="link-list">
       <h3 className="link-list__title">{title}</h3>
