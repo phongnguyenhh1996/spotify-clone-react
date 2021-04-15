@@ -1,5 +1,5 @@
-import React, {Fragment} from 'react'
-import {Switch, Route, BrowserRouter} from 'react-router-dom'
+import React, { Fragment } from 'react'
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import routes from './routes'
 
 const AppRouter = () => (

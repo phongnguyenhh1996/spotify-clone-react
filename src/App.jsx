@@ -1,10 +1,10 @@
 import React from 'react'
 
-import {Provider} from 'react-redux'
+import { Provider } from 'react-redux'
 import 'normalize.css'
 import './app.scss'
 import AppRouter from '@/routes'
-import store from '../store'
+import store from '@/store/store'
 
 export default function App() {
   return (

@@ -1,17 +1,17 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './style.scss'
-import {Link} from 'react-router-dom'
-import {FaBars} from 'react-icons/fa'
+import { Link } from 'react-router-dom'
+import { FaBars } from 'react-icons/fa'
 import classes from 'classnames'
-import {listLink} from './contants'
+import { listLink } from './contants'
 import logo from '../../images/logoSpotify.svg'
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false)
   const navbarMobile = classes(
     'navbar__mobile',
-    {'show-menu': showMenu},
-    {'off-menu': !showMenu},
+    { 'show-menu': showMenu },
+    { 'off-menu': !showMenu },
   )
   const handleshowMenu = () => {
     setShowMenu(!showMenu)

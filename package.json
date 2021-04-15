@@ -7,11 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
     "build": "NODE_ENV=production webpack",
-    "lint": "eslint --fix src/*.js src/*.jsx && stylelint --fix src/*.scss"
+    "lint": "./node_modules/.bin/eslint --fix --ext .jsx,.js src/ && stylelint \"src/**/*.scss\" --fix"
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "eslint .",
+      "./node_modules/.bin/eslint --ext .jsx,.js src/",
       "git add"
     ],
     "*.scss": [
@@ -68,6 +68,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.5.1",
     "classnames": "^2.3.1",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
@@ -75,9 +76,6 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
     "react-redux": "^7.2.3",
-    "react-router-dom": "^5.2.0",
-    "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.9",
-    "redux-thunk": "^2.3.0"
+    "react-router-dom": "^5.2.0"
   }
 }
