@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div>
       {value}
-      <div>
+      <div style={{ height: '500px' }}>
         Home page <Link to="/login">Go to login</Link>
       </div>
     </div>
