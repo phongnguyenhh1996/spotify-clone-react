@@ -16,7 +16,6 @@ const routes = [
     component: Login,
     isAuthRoute: false,
     exact: true,
-    layout: LoginLayout,
   },
   {
     path: '/',
