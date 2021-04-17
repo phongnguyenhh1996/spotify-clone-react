@@ -1,7 +1,7 @@
 const path = require('path')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const StylelintPlugin = require('stylelint-webpack-plugin')
@@ -52,7 +52,7 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             // This is required for asset imports in CSS, such as url()
-            options: {publicPath: ''},
+            options: { publicPath: '' },
           },
           'css-loader',
           'postcss-loader',
@@ -122,6 +122,7 @@ module.exports = {
   // required if using webpack-dev-server
   devServer: {
     contentBase: './dist',
+    historyApiFallback: true,
     hot: true,
   },
 }
