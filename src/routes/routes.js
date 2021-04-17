@@ -1,4 +1,4 @@
-import LoginLayout from '@/components/Layout/LoginLayout'
+import LoginLayout from '@/components/Layout/WellComeLayout'
 import Home from '@/containers/Home'
 import Login from '@/containers/Login'
 import Wellcome from '@/containers/WellCome'

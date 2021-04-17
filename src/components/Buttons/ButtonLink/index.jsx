@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 import './style.scss'
 
 function ButtonLink(props) {
-  const { text, Icon, classbtn } = props
+  const { text, Icon, theme } = props
 
   return (
-    <Link to="/" className={`btn-link ${classbtn}`}>
+    <Link to="/" className={`btn-link btn-link--${theme}`}>
       {Icon && <Icon className="btn-link__icon" />}
       {text}
     </Link>
@@ -15,13 +15,13 @@ function ButtonLink(props) {
 }
 ButtonLink.defaultProps = {
   text: '',
-  classbtn: '',
-  Icon: '',
+  theme: '',
+  Icon: null,
 }
 
 ButtonLink.propTypes = {
   text: PropTypes.string,
-  classbtn: PropTypes.string,
+  theme: PropTypes.string,
   Icon: PropTypes.node,
 }
 

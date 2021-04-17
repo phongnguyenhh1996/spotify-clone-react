@@ -1,4 +1,4 @@
-@import '../../scss/color.scss';
+@import '@/scss/color.scss';
 
 .login {
   padding-bottom: 30px;
@@ -10,7 +10,7 @@
     padding: 20px 0;
     border-bottom: 1px solid #d9dadc;
 
-    & img {
+    &-image {
       height: 100px;
       width: 200px;
     }
@@ -30,52 +30,13 @@
   &__network {
     display: flex;
     flex-direction: column;
-    margin: 50px 0;
+    margin: 50px 0 0;
     width: 500px;
     text-align: center;
   }
 
   &__form {
     padding: 10px 0;
-  }
-
-  &__forgot {
-    text-decoration: underline;
-    font-size: 13px;
-    font-weight: 600;
-    color: #777;
-    transition: all 0.3s ease;
-
-    &:hover {
-      color: $green;
-    }
-  }
-
-  &__submit {
-    margin-top: 10px;
-    padding-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #d9dadc;
-  }
-
-  &__checkbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &-span {
-      font-size: 15px;
-      font-weight: 600;
-      color: $gray;
-    }
-
-    &-input {
-      background-color: $green;
-      border: 1px solid $green;
-      margin-right: 5px;
-    }
   }
 
   &__title {
