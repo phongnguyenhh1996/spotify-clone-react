@@ -68,14 +68,18 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@hookform/resolvers": "^2.4.0",
     "@reduxjs/toolkit": "^1.5.1",
     "classnames": "^2.3.1",
+    "lodash": "^4.17.21",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-hook-form": "^7.1.1",
     "react-icons": "^4.2.0",
     "react-redux": "^7.2.3",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "yup": "^0.32.9"
   }
 }
