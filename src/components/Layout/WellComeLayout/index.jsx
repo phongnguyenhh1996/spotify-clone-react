@@ -2,7 +2,7 @@ import Footer from '@/Components/Footer'
 import Header from '@/Components/Header'
 import React from 'react'
 
-function LoginLayout({ children }) {
+function WellComeLayout({ children }) {
   return (
     <>
       <Header />
@@ -12,4 +12,4 @@ function LoginLayout({ children }) {
   )
 }
 
-export default LoginLayout
+export default WellComeLayout
