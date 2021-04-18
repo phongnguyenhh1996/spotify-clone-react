@@ -13,16 +13,17 @@ function ButtonLink(props) {
     </Link>
   )
 }
-ButtonLink.defaultProps = {
-  text: '',
-  theme: '',
-  Icon: null,
-}
 
 ButtonLink.propTypes = {
   text: PropTypes.string,
   theme: PropTypes.string,
-  Icon: PropTypes.node,
+  Icon: PropTypes.oneOfType([PropTypes.any]),
+}
+
+ButtonLink.defaultProps = {
+  text: '',
+  theme: '',
+  Icon: null,
 }
 
 export default ButtonLink
