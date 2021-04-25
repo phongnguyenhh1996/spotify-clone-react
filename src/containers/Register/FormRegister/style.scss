@@ -54,23 +54,23 @@
     align-items: center;
     padding: 5px 0;
     margin-right: 30px;
+  }
 
-    & label {
-      font-size: 14px;
-      font-weight: 500;
-      margin-left: 5px;
-    }
+  &__radio-item-label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 5px;
   }
 
   &__check {
     display: flex;
     padding: 10px 0;
+  }
 
-    & span {
-      font-size: 14px;
-      font-weight: 500;
-      margin-left: 10px;
-    }
+  &__check-span {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
   }
 
   &__desciption-span {

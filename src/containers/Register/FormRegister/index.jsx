@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import InputRegister from '../InputRegister'
+import { monthsSelect } from './contant'
 import './style.scss'
 
 function FormRegister() {
@@ -10,18 +11,22 @@ function FormRegister() {
         <InputRegister
           label="What's your email?"
           placeholder="Enter your email."
+          id="email"
         />
         <InputRegister
           label="Confirm your email"
           placeholder="Enter your email again."
+          id="email"
         />
         <InputRegister
           label="Create a password"
           placeholder="Create a password."
+          id="password"
         />
         <InputRegister
           label="What should we call you?"
           placeholder="Enter a profile name."
+          id="name"
         />
         <h3 className="form-resgister-h3"> What&apos;s your date of birth?</h3>
         <div className="form-resgister__time">
@@ -46,18 +51,11 @@ function FormRegister() {
               id="mm"
               placeholder="MONTH"
             >
-              <option value="january">january</option>
-              <option value="February">February</option>
-              <option value="March">March</option>
-              <option value="April">April</option>
-              <option value="May">May</option>
-              <option value="June">June</option>
-              <option value="July">July</option>
-              <option value="August">August</option>
-              <option value="September">September</option>
-              <option value="October">October</option>
-              <option value="November">November</option>
-              <option value="Devember">Devember</option>
+              {monthsSelect.map((moth, index) => (
+                <option key={index.toString()} value={moth}>
+                  {moth}
+                </option>
+              ))}
             </select>
           </div>
           <div className="form-resgister__year">
@@ -84,18 +82,20 @@ function FormRegister() {
           </div>
           <div className="form-resgister__radio-item">
             <input type="radio" id="male" name="gender" value="male" />
-            <label htmlFor="male">Non-binary</label>
+            <label className="form-resgister__radio-item-label" htmlFor="male">
+              Non-binary
+            </label>
           </div>
         </div>
         <div className="form-resgister__check">
           <input type="checkbox" />
-          <span>
+          <span className="form-resgister__check-span">
             I would prefer not to receive marketing messages from Spotify
           </span>
         </div>
         <div className="form-resgister__check">
           <input type="checkbox" />
-          <span>
+          <span className="form-resgister__check-span">
             Share my registration data with Spotify&apos;s content providers for
             marketing purposes.
           </span>
